@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceStore.API", "ServiceStore.API\ServiceStore.API.csproj", "{9C0CFB47-B57C-4826-9F37-9EF69DFDE1E5}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ServiceStore.DB", "ServiceStore.DB\ServiceStore.DB.sqlproj", "{A5406966-64A8-4FAF-AE16-B4605EAF13FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{9C0CFB47-B57C-4826-9F37-9EF69DFDE1E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C0CFB47-B57C-4826-9F37-9EF69DFDE1E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C0CFB47-B57C-4826-9F37-9EF69DFDE1E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5406966-64A8-4FAF-AE16-B4605EAF13FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5406966-64A8-4FAF-AE16-B4605EAF13FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5406966-64A8-4FAF-AE16-B4605EAF13FB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A5406966-64A8-4FAF-AE16-B4605EAF13FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5406966-64A8-4FAF-AE16-B4605EAF13FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5406966-64A8-4FAF-AE16-B4605EAF13FB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
