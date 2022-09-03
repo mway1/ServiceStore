@@ -2,6 +2,7 @@
 AS
 BEGIN
 
-	SELECT Id,LeadId,SubStartDate,SubEndDate,ServiceId,isDeleted
-	FROM dbo.Lead
+	SELECT L.Id,L.LeadId,L.SubStartDate,L.SubEndDate,S.Name,L.isDeleted
+	FROM dbo.Lead as L
+	LEFT JOIN dbo.Service as S on (S.Id=L.ServiceId)
 END
