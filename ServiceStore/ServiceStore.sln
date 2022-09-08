@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceStore.API", "ServiceStore.API\ServiceStore.API.csproj", "{9C0CFB47-B57C-4826-9F37-9EF69DFDE1E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceStore.API", "ServiceStore.API\ServiceStore.API.csproj", "{9C0CFB47-B57C-4826-9F37-9EF69DFDE1E5}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ServiceStore.DB", "ServiceStore.DB\ServiceStore.DB.sqlproj", "{A5406966-64A8-4FAF-AE16-B4605EAF13FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceStore.DataLayer", "ServiceStore.DataLayer\ServiceStore.DataLayer.csproj", "{EA39C8C2-B231-4DF8-B7F5-DCDD51A66B0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{A5406966-64A8-4FAF-AE16-B4605EAF13FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5406966-64A8-4FAF-AE16-B4605EAF13FB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A5406966-64A8-4FAF-AE16-B4605EAF13FB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EA39C8C2-B231-4DF8-B7F5-DCDD51A66B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA39C8C2-B231-4DF8-B7F5-DCDD51A66B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA39C8C2-B231-4DF8-B7F5-DCDD51A66B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA39C8C2-B231-4DF8-B7F5-DCDD51A66B0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
