@@ -27,9 +27,12 @@ namespace ServiceStore.DataLayer
             return id;
         }
 
-        public Task Delete(int id, bool isDeleting)
+        public async Task Delete(int id, bool isDeleting)
         {
-            throw new NotImplementedException();
+            await _connectionString.QueryFirstOrDefaultAsync<LeadDTO>(
+                StoredProcedures.Lead_Delete,
+                param: new { id },
+                commandType: System.Data.CommandType.StoredProcedure);
         }
 
         public async Task<List<LeadDTO>> GetAll()
