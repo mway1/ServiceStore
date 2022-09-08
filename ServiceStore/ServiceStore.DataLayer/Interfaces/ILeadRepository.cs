@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ServiceStore.DataLayer.Interfaces
+﻿namespace ServiceStore.DataLayer
 {
-    internal class ILeadRepository
+    public interface ILeadRepository
     {
+        Task<int> Add(LeadDTO leadDto);
+        Task<List<LeadDTO>> GetAll();
+        Task<LeadDTO> GetById(int id);
+        Task<LeadDTO> GetByEmail(string email);
+        Task Update(LeadDTO leadDto);
+        Task DeleteOrRestore(int id, bool isDeleting);
     }
 }
