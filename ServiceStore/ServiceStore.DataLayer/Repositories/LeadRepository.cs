@@ -27,17 +27,12 @@ namespace ServiceStore.DataLayer
             return id;
         }
 
-        public Task DeleteOrRestore(int id, bool isDeleting)
+        public Task Delete(int id, bool isDeleting)
         {
             throw new NotImplementedException();
         }
 
         public Task<List<LeadDTO>> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<LeadDTO> GetByEmail(string email)
         {
             throw new NotImplementedException();
         }
