@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServiceStore.DataLayer.Models
+namespace ServiceStore.DataLayer
 {
     public class TypeOfServiceDTO
     {
