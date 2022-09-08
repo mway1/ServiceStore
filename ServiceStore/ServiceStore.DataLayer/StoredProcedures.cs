@@ -18,6 +18,12 @@ namespace ServiceStore.DataLayer
         public const string Service_Delete = "Service_Delete";
         public const string Service_GetAll = "Service_GetAll";
         public const string Service_GetById = "Service_GetById";
-        public const string Service_Update = "Service_Update";
+        public const string Service_Update = "Service_Update"; 
+        
+        public const string TypeOfService_Add = "TypeOfService_Add";
+        public const string TypeOfService_Delete = "TypeOfService_Delete";
+        public const string TypeOfService_GetAll = "TypeOfService_GetAll";
+        public const string TypeOfService_GetById = "TypeOfService_GetById";
+        public const string TypeOfService_Update = "TypeOfService_Update";
     }
 }
