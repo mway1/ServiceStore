@@ -55,9 +55,19 @@ namespace ServiceStore.DataLayer
             return lead;
         }
 
-        public Task Update(LeadDTO leadDto)
+        public async Task Update(LeadDTO leadDto)
         {
-            throw new NotImplementedException();
+            await _connectionString.QueryFirstOrDefaultAsync<LeadDTO>(
+            StoredProcedures.Lead_Update,
+            param: new
+            {
+                leadDto.Id,
+                leadDto.LeadId,
+                leadDto.SubStartDate,
+                leadDto.SubEndDate,
+                leadDto.ServiceId
+            },
+            commandType: System.Data.CommandType.StoredProcedure);
         }
     }
 }
