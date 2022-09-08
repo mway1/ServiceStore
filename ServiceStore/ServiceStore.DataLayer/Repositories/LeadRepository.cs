@@ -42,9 +42,14 @@ namespace ServiceStore.DataLayer
             return leads;
         }
 
-        public Task<LeadDTO> GetById(int id)
+        public async Task<LeadDTO> GetById(int id)
         {
-            throw new NotImplementedException();
+            var lead = await _connectionString.QueryFirstOrDefaultAsync<LeadDTO>(
+            StoredProcedures.Lead_GetById,
+            param: new { id },
+            commandType: System.Data.CommandType.StoredProcedure);
+
+            return lead;
         }
 
         public Task Update(LeadDTO leadDto)
