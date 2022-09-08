@@ -32,9 +32,14 @@ namespace ServiceStore.DataLayer
             throw new NotImplementedException();
         }
 
-        public Task<List<LeadDTO>> GetAll()
+        public async Task<List<LeadDTO>> GetAll()
         {
-            throw new NotImplementedException();
+            var leads = _connectionString.Query<LeadDTO>(
+            StoredProcedures.Lead_GetAll,
+            commandType: System.Data.CommandType.StoredProcedure)
+            .ToList();
+
+            return leads;
         }
 
         public Task<LeadDTO> GetById(int id)
