@@ -10,29 +10,66 @@ namespace ServiceStore.DataLayer
 
         }
 
-        public Task<int> Add(ServiceDTO leadDto)
+        public async Task<int> Add(ServiceDTO serviceDto)
         {
-            throw new NotImplementedException();
+            var id = await _connectionString.QuerySingleAsync<int>(
+           StoredProcedures.Service_Add,
+           param: new
+           {
+               serviceDto.Id,
+               serviceDto.Name,
+               serviceDto.Description,
+               serviceDto.TypeId,
+               serviceDto.Price,
+               serviceDto.isDeleted
+           },
+           commandType: System.Data.CommandType.StoredProcedure);
+
+            return id;
         }
 
-        public Task Delete(int id, bool isDeleting)
+        public async Task Delete(int id, bool isDeleting)
         {
-            throw new NotImplementedException();
+            await _connectionString.QueryFirstOrDefaultAsync<ServiceDTO>(
+                StoredProcedures.Service_Delete,
+                param: new { id },
+                commandType: System.Data.CommandType.StoredProcedure);
         }
 
-        public Task<List<ServiceDTO>> GetAll()
+        public async Task<List<ServiceDTO>> GetAll()
         {
-            throw new NotImplementedException();
+            var services = _connectionString.Query<ServiceDTO>(
+            StoredProcedures.Service_GetAll,
+            commandType: System.Data.CommandType.StoredProcedure)
+            .ToList();
+
+            return services;
         }
 
-        public Task<ServiceDTO> GetById(int id)
+        public async Task<ServiceDTO> GetById(int id)
         {
-            throw new NotImplementedException();
+            var service = await _connectionString.QueryFirstOrDefaultAsync<ServiceDTO>(
+           StoredProcedures.Service_GetById,
+           param: new { id },
+           commandType: System.Data.CommandType.StoredProcedure);
+
+            return service;
         }
 
-        public Task Update(ServiceDTO leadDto)
+        public async Task Update(ServiceDTO serviceDto)
         {
-            throw new NotImplementedException();
+            await _connectionString.QueryFirstOrDefaultAsync<ServiceDTO>(
+            StoredProcedures.Service_Update,
+            param: new
+            {
+                serviceDto.Id,
+                serviceDto.Name,
+                serviceDto.Description,
+                serviceDto.TypeId,
+                serviceDto.Price,
+                serviceDto.isDeleted
+            },
+            commandType: System.Data.CommandType.StoredProcedure);
         }
     }
 }
